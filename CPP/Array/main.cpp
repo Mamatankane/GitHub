@@ -1,5 +1,10 @@
-
-
+// Scenerio
+// You will create a wrapper class for a 2D integer array called TwoDArray. Overloading some operators will provide output for usage outside the class.
+// For this use case once the 2D array is contained by an object of this class, we don’t want it to be
+// modified again. Thus, all the operations performed by the child classes will be read-only.
+// In Task 2, you will create the actual derived classes that each perform specific operations on the data
+// contained in the 2-dimensional array. These classes will have access to the 2D array of the parent
+// class, but will use the data in different ways despite the fact that the same function call is used ([ ]).
 #include <iostream>
 #include <cstdlib>
 

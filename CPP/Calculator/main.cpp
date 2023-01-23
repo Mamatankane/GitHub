@@ -1,3 +1,6 @@
+// Scenario
+// For this practical you will be creating an object that represents a calculator that uses two stacks
+
 #include <iostream>
 #include <string>
 #include <sstream>

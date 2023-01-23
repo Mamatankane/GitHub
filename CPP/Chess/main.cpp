@@ -1,3 +1,5 @@
+// Scenario
+// For this practical you will be creating two objects that represent a chessboard and a chesspiece 
 #include "chessboard.h"
 #include "chesspiece.h"
 

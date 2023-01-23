@@ -1,5 +1,9 @@
-//Remember to add more test cases
-//This main as-is does not test for everything
+// Scenerio
+// You are tasked with creating a small, basic loading system for a shipping company that uses planes
+// to transport goods and people (as passengers). You need to create a generic plane class, which will
+// store instances of some sort of cargo. You will also implement some operations for the plane class,
+// and exceptions which are thrown under certain conditions. A controller class will control a plane’s
+// loading, and handle any exceptions that occur.
 
 #include <iostream>
 #include "Controller.h"
@@ -13,42 +17,42 @@ int main()
 
 	cout<<"-----Testing Cargo-----"<<endl<<endl;
 
-	// Plane<Cargo>* plane = new Plane<Cargo>(200);
-	// Controller<Cargo> cc(plane);
-	// cout<<cc.loadOnPlane(new Cargo(50, 5))<<endl;
-	// cout<<cc.loadOnPlane(new Cargo(0.2, 500))<<endl;
-	// cout<<cc.loadOnPlane(new Cargo(30, 5))<<endl;
-	// cout<<cc.loadOnPlane(new Cargo(80.4, 1))<<endl;
-	// cout<<cc.loadOnPlane(new Cargo(50, 5))<<endl;
+	Plane<Cargo>* plane = new Plane<Cargo>(200);
+	Controller<Cargo> cc(plane);
+	cout<<cc.loadOnPlane(new Cargo(50, 5))<<endl;
+	cout<<cc.loadOnPlane(new Cargo(0.2, 500))<<endl;
+	cout<<cc.loadOnPlane(new Cargo(30, 5))<<endl;
+	cout<<cc.loadOnPlane(new Cargo(80.4, 1))<<endl;
+	cout<<cc.loadOnPlane(new Cargo(50, 5))<<endl;
 
-	// cout<<"Total value: "<<cc.getTotalValue()<<endl;
-	// cout<<"Contents:\n"<<cc.getPlaneContents()<<endl<<endl;
+	cout<<"Total value: "<<cc.getTotalValue()<<endl;
+	cout<<"Contents:\n"<<cc.getPlaneContents()<<endl<<endl;
 
-	// cout<<"-----Testing Passenger-----"<<endl<<endl;
+	cout<<"-----Testing Passenger-----"<<endl<<endl;
 
-	// Plane<Passenger>* pplane = new Plane<Passenger>(2000);
-	// Controller<Passenger> pc(pplane);
-	// cout<<pc.loadOnPlane(new Passenger("ID0", 80.0, 1500))<<endl;
-	// cout<<pc.loadOnPlane(new Passenger("ID1", 70, 1000))<<endl;
-	// cout<<pc.loadOnPlane(new Passenger("ID2", 50, 1000))<<endl;
-	// cout<<pc.loadOnPlane(new Passenger("ID3", 100, 2000))<<endl;
-	// cout<<pc.loadOnPlane(new Passenger("ID4", 80, 1500))<<endl;
+	Plane<Passenger>* pplane = new Plane<Passenger>(2000);
+	Controller<Passenger> pc(pplane);
+	cout<<pc.loadOnPlane(new Passenger("ID0", 80.0, 1500))<<endl;
+	cout<<pc.loadOnPlane(new Passenger("ID1", 70, 1000))<<endl;
+	cout<<pc.loadOnPlane(new Passenger("ID2", 50, 1000))<<endl;
+	cout<<pc.loadOnPlane(new Passenger("ID3", 100, 2000))<<endl;
+	cout<<pc.loadOnPlane(new Passenger("ID4", 80, 1500))<<endl;
 
-	// cout<<"Total value: "<<pc.getTotalValue()<<endl;
-	// cout<<"Contents:\n"<<pc.getPlaneContents()<<endl;
+	cout<<"Total value: "<<pc.getTotalValue()<<endl;
+	cout<<"Contents:\n"<<pc.getPlaneContents()<<endl;
 
-	// cout<<endl<<"-----Testing Secret Cargo-----"<<endl<<endl;
+	cout<<endl<<"-----Testing Secret Cargo-----"<<endl<<endl;
 
-	// Plane<SecretCargo>* splane = new Plane<SecretCargo>(100);
-	// Controller<SecretCargo> sc(splane);
-	// cout<<sc.loadOnPlane(new SecretCargo(20))<<endl;
-	// cout<<sc.loadOnPlane(new SecretCargo(10))<<endl;
-	// cout<<sc.loadOnPlane(new SecretCargo(50))<<endl;
-	// cout<<sc.loadOnPlane(new SecretCargo(5))<<endl;
+	Plane<SecretCargo>* splane = new Plane<SecretCargo>(100);
+	Controller<SecretCargo> sc(splane);
+	cout<<sc.loadOnPlane(new SecretCargo(20))<<endl;
+	cout<<sc.loadOnPlane(new SecretCargo(10))<<endl;
+	cout<<sc.loadOnPlane(new SecretCargo(50))<<endl;
+	cout<<sc.loadOnPlane(new SecretCargo(5))<<endl;
 
-	// cout<<"Total value: "<<sc.getTotalValue()<<endl;
-	// cout<<"Contents:\n"<<sc.getPlaneContents()<<endl;
-	// //cplane
+	cout<<"Total value: "<<sc.getTotalValue()<<endl;
+	cout<<"Contents:\n"<<sc.getPlaneContents()<<endl;
+	//cplane
 
 
 	return 0;

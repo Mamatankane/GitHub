@@ -1,3 +1,5 @@
+// For this assignment, you will create a simplistic mathematical “library” to perform various matrix manipulations and solve systems of linear equations. Operator overloading will be used to
+// implement the matrix arithmetic.
 #include <iostream>
 #include <fstream>
 #include "arithmetic.h"

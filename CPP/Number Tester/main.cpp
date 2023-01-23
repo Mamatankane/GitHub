@@ -1,4 +1,4 @@
-
+// For this practical you will be creating an object that represents a number tester that can be used to test numbers
 #include "IsEvenOdd.h"
 #include "IsPrimeNumber.h"
 #include "IsGreater.h"

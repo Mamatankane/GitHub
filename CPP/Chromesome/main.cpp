@@ -1,3 +1,15 @@
+// Scenerio
+// For this assignment, your GA will need to try and get all the chromosomes in the population to only
+// contain 1’s. Although this can be easily programmed explicitly the idea is to investigate how the GA
+// performs and to gain experience with pointers.
+// what is a GA?
+// Genetic Algorithms (GA) are a type of evolutionary algorithm developed by John H. Holland in
+// the 1960’s. GAs are based on the idea of survival of the fittest where a fitness value is assigned to
+// possible solution. This value is an indicator as to how well the possible solution solves the given
+// problem. A GA consists out of a population of possible solutions also referred to as chromosomes.
+// Each chromosome consists of a set of genes, which is used to encode the actual value of the possible
+// solution. Chromosomes are usually encoded as a binary string where each bit represents a gene.
+
 #include <iostream>
 #include <ctime>
 
