@@ -1,0 +1,1812 @@
+==============Testing Vector========================
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1         4
+rhs: 
+        -8        -8         5        -7        10
+test: +
+Output: 
+        -2        -2        13        -8        14
+lhs prev state
+         6         6         8        -1         4
+
+test: -
+Output: 
+        14        14         3         6        -6
+lhs prev state
+         6         6         8        -1         4
+
+test: +=
+Output: 
+        -2        -2        13        -8        14
+
+test: -=
+Output: 
+        14        14         3         6        -6
+
+0
+test: ^=
+Output: 
+         1         1         1         1         1
+
+test: ^
+Output: 
+         1         1         1         1         1
+lhs prev state
+         6         6         8        -1         4
+
+test: ~
+Output: 
+         4        -1         8         6         6
+lhs prev state
+         6         6         8        -1         4
+
+0
+test: *
+Output: 
+///////object*n////////
+         0         0         0        -0         0
+lhs prev state
+         6         6         8        -1         4
+///////n*object////////
+         0         0         0        -0         0
+lhs prev state
+         6         6         8        -1         4
+
+0
+test: *=
+Output: 
+         0         0         0        -0         0
+
+0
+test: /
+Output: 
+Error: division by zero
+
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1         4
+rhs: 
+        -8        -8         5        -7        10         2
+test: +
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -
+Output: 
+Error: subtracting vectors of different dimensionality
+
+test: +=
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -=
+Output: 
+Error: subtracting vectors of different dimensionality
+
+2
+test: ^=
+Output: 
+        36        36        64         1        16
+
+test: ^
+Output: 
+        36        36        64         1        16
+lhs prev state
+         6         6         8        -1         4
+
+test: ~
+Output: 
+         4        -1         8         6         6
+lhs prev state
+         6         6         8        -1         4
+
+2
+test: *
+Output: 
+///////object*n////////
+        12        12        16        -2         8
+lhs prev state
+         6         6         8        -1         4
+///////n*object////////
+        12        12        16        -2         8
+lhs prev state
+         6         6         8        -1         4
+
+2
+test: *=
+Output: 
+        12        12        16        -2         8
+
+2
+test: /
+Output: 
+         3         3         4      -0.5         2
+lhs prev state
+         6         6         8        -1         4
+
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+rhs: 
+        -1         4        -8
+test: +
+Output: 
+         5        10         0
+lhs prev state
+         6         6         8
+
+test: -
+Output: 
+         7         2        16
+lhs prev state
+         6         6         8
+
+test: +=
+Output: 
+         5        10         0
+
+test: -=
+Output: 
+         7         2        16
+
+-2
+test: ^=
+Output: 
+Error: negative power is not supported
+
+test: ^
+Output: 
+Error: negative power is not supported
+
+test: ~
+Output: 
+         8         6         6
+lhs prev state
+         6         6         8
+
+-2
+test: *
+Output: 
+///////object*n////////
+       -12       -12       -16
+lhs prev state
+         6         6         8
+///////n*object////////
+       -12       -12       -16
+lhs prev state
+         6         6         8
+
+-2
+test: *=
+Output: 
+       -12       -12       -16
+
+-2
+test: /
+Output: 
+        -3        -3        -4
+lhs prev state
+         6         6         8
+
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1
+rhs: 
+         4        -8        -8
+test: +
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -
+Output: 
+Error: subtracting vectors of different dimensionality
+
+test: +=
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -=
+Output: 
+Error: subtracting vectors of different dimensionality
+
+-1
+test: ^=
+Output: 
+Error: negative power is not supported
+
+test: ^
+Output: 
+Error: negative power is not supported
+
+test: ~
+Output: 
+        -1         8         6         6
+lhs prev state
+         6         6         8        -1
+
+-1
+test: *
+Output: 
+///////object*n////////
+        -6        -6        -8         1
+lhs prev state
+         6         6         8        -1
+///////n*object////////
+        -6        -6        -8         1
+lhs prev state
+         6         6         8        -1
+
+-1
+test: *=
+Output: 
+        -6        -6        -8         1
+
+-1
+test: /
+Output: 
+        -6        -6        -8         1
+lhs prev state
+         6         6         8        -1
+
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1
+rhs: 
+         4        -8        -8         5        -7
+test: +
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -
+Output: 
+Error: subtracting vectors of different dimensionality
+
+test: +=
+Output: 
+Error: adding vectors of different dimensionality
+
+test: -=
+Output: 
+Error: subtracting vectors of different dimensionality
+
+4
+test: ^=
+Output: 
+   1.3e+03   1.3e+03   4.1e+03         1
+
+test: ^
+Output: 
+   1.3e+03   1.3e+03   4.1e+03         1
+lhs prev state
+         6         6         8        -1
+
+test: ~
+Output: 
+        -1         8         6         6
+lhs prev state
+         6         6         8        -1
+
+4
+test: *
+Output: 
+///////object*n////////
+        24        24        32        -4
+lhs prev state
+         6         6         8        -1
+///////n*object////////
+        24        24        32        -4
+lhs prev state
+         6         6         8        -1
+
+4
+test: *=
+Output: 
+        24        24        32        -4
+
+4
+test: /
+Output: 
+       1.5       1.5         2     -0.25
+lhs prev state
+         6         6         8        -1
+
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1         4        -8
+rhs: 
+        -8         5        -7        10         2        -5
+test: +
+Output: 
+        -2        11         1         9         6       -13
+lhs prev state
+         6         6         8        -1         4        -8
+
+test: -
+Output: 
+        14         1        15       -11         2        -3
+lhs prev state
+         6         6         8        -1         4        -8
+
+test: +=
+Output: 
+        -2        11         1         9         6       -13
+
+test: -=
+Output: 
+        14         1        15       -11         2        -3
+
+5
+test: ^=
+Output: 
+  7.78e+03  7.78e+03  3.28e+04        -1  1.02e+03 -3.28e+04
+
+test: ^
+Output: 
+  7.78e+03  7.78e+03  3.28e+04        -1  1.02e+03 -3.28e+04
+lhs prev state
+         6         6         8        -1         4        -8
+
+test: ~
+Output: 
+        -8         4        -1         8         6         6
+lhs prev state
+         6         6         8        -1         4        -8
+
+5
+test: *
+Output: 
+///////object*n////////
+        30        30        40        -5        20       -40
+lhs prev state
+         6         6         8        -1         4        -8
+///////n*object////////
+        30        30        40        -5        20       -40
+lhs prev state
+         6         6         8        -1         4        -8
+
+5
+test: *=
+Output: 
+        30        30        40        -5        20       -40
+
+5
+test: /
+Output: 
+       1.2       1.2       1.6      -0.2       0.8      -1.6
+lhs prev state
+         6         6         8        -1         4        -8
+
+======================end===============================
+
+==============Testing Matrix========================
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+rhs: 
+        10         2        -5
+         6         3        -5
+        -6         2         8
+test: +
+Output: 
+        16         8         3
+         5         7       -13
+       -14         7         1
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: -
+Output: 
+        -4         4        13
+        -7         1        -3
+        -2         3       -15
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: +=
+Output: 
+        16         8         3
+         5         7       -13
+       -14         7         1
+
+test: -=
+Output: 
+        -4         4        13
+        -7         1        -3
+        -2         3       -15
+
+0
+test: ^=
+Output: 
+         1         0         0
+         0         1         0
+         0         0         1
+
+test: ^
+Output: 
+         1         0         0
+         0         1         0
+         0         0         1
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: ~
+Output: 
+         6        -1        -8
+         6         4         5
+         8        -8        -7
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+0
+test: *
+Output: 
+///////object*n////////
+         0         0         0
+        -0         0        -0
+        -0         0        -0
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+///////n*object////////
+         0         0         0
+        -0         0        -0
+        -0         0        -0
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+0
+test: object*=n
+Output: 
+         0         0         0
+        -0         0        -0
+        -0         0        -0
+
+0
+test: /
+Output: 
+Error: division by zero
+
+test: object*object
+Output: 
+        48        46         4
+        62        -6       -79
+        -8       -15       -41
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: object*=object
+Output: 
+        48        46         4
+        62        -6       -79
+        -8       -15       -41
+
+Matrix B:
+        -8
+         0
+        -6
+test: object|=object
+Output: 
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+test: object|object
+Output: 
+      1.41
+     -1.65
+    -0.824
+lhs prev state
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+test: object|=object
+Output: 
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+current state of lhs and B
+         6         6         8
+        -1         4        -8
+         0         3        17
+        -8
+         0
+       -14
+==========================================
+prev state of lhs and B
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        -8
+         0
+        -6
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+rhs: 
+         2         8
+        -8         0
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+1
+test: ^=
+Output: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+test: ^
+Output: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+test: ~
+Output: 
+         6         4        -7         6
+         6        -8        10         3
+         8        -8         2        -5
+        -1         5        -5        -6
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+1
+test: *
+Output: 
+///////object*n////////
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+///////n*object////////
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+1
+test: object*=n
+Output: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+1
+test: /
+Output: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+
+test: object*object
+Output: 
+Error: invalid matrix multiplication
+
+test: object*=object
+Output: 
+Error: invalid matrix multiplication
+
+Matrix B:
+        -6
+         7
+test: object|=object
+Output: 
+Error: incorrect augmentation
+
+test: object|object
+Output: 
+Error: incorrect augmentation
+
+test: object|=object
+Output: 
+Error: incorrect augmentation
+
+current state of lhs and B
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+        -6
+         7
+==========================================
+prev state of lhs and B
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         6         3        -5        -6
+        -6
+         7
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+rhs: 
+         6         3        -5        -6
+         2         8        -8         0
+        -6         7        10        -2
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+-2
+test: ^=
+Output: 
+Error: negative power is not supported
+
+test: ^
+Output: 
+Error: negative power is not supported
+
+test: ~
+Output: 
+         6        -1        -8        10
+         6         4         5         2
+         8        -8        -7        -5
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+
+-2
+test: *
+Output: 
+///////object*n////////
+       -12       -12       -16
+         2        -8        16
+        16       -10        14
+       -20        -4        10
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+///////n*object////////
+       -12       -12       -16
+         2        -8        16
+        16       -10        14
+       -20        -4        10
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+
+-2
+test: object*=n
+Output: 
+       -12       -12       -16
+         2        -8        16
+        16       -10        14
+       -20        -4        10
+
+-2
+test: /
+Output: 
+        -3        -3        -4
+       0.5        -2         4
+         4      -2.5       3.5
+        -5        -1       2.5
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+
+test: object*object
+Output: 
+         0       122         2       -52
+        50       -27      -107        22
+         4       -33       -70        62
+        94        11      -116       -50
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+
+test: object*=object
+Output: 
+         0       122         2       -52
+        50       -27      -107        22
+         4       -33       -70        62
+        94        11      -116       -50
+
+Matrix B:
+         2
+        -6
+         6
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+test: object|object
+Output: 
+Error: non-square matrix provided
+
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+current state of lhs and B
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+         2
+        -6
+         6
+==========================================
+prev state of lhs and B
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+        10         2        -5
+         2
+        -6
+         6
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+        -1         4        -8
+rhs: 
+        -8         5        -7
+        10         2        -5
+         6         3        -5
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+2
+test: ^=
+Output: 
+Error: non-square matrix provided
+
+test: ^
+Output: 
+Error: non-square matrix provided
+
+test: ~
+Output: 
+         6        -1
+         6         4
+         8        -8
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+2
+test: *
+Output: 
+///////object*n////////
+        12        12        16
+        -2         8       -16
+lhs prev state
+         6         6         8
+        -1         4        -8
+///////n*object////////
+        12        12        16
+        -2         8       -16
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+2
+test: object*=n
+Output: 
+        12        12        16
+        -2         8       -16
+
+2
+test: /
+Output: 
+         3         3         4
+      -0.5         2        -4
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+test: object*object
+Output: 
+        60        66      -112
+         0       -21        27
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+test: object*=object
+Output: 
+        60        66      -112
+         0       -21        27
+
+Matrix B:
+        -6
+         2
+         8
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+test: object|object
+Output: 
+Error: non-square matrix provided
+
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+current state of lhs and B
+         6         6         8
+        -1         4        -8
+        -6
+         2
+         8
+==========================================
+prev state of lhs and B
+         6         6         8
+        -1         4        -8
+        -6
+         2
+         8
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+rhs: 
+        10         2        -5         6         3
+        -5        -6         2         8        -8
+         0        -6         7        10        -2
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+3
+test: ^=
+Output: 
+       144       -84      -680
+       226       284       560
+       521      -509       913
+
+test: ^
+Output: 
+       144       -84      -680
+       226       284       560
+       521      -509       913
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: ~
+Output: 
+         6        -1        -8
+         6         4         5
+         8        -8        -7
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+3
+test: *
+Output: 
+///////object*n////////
+        18        18        24
+        -3        12       -24
+       -24        15       -21
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+///////n*object////////
+        18        18        24
+        -3        12       -24
+       -24        15       -21
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+3
+test: object*=n
+Output: 
+        18        18        24
+        -3        12       -24
+       -24        15       -21
+
+3
+test: /
+Output: 
+         2         2      2.67
+    -0.333      1.33     -2.67
+     -2.67      1.67     -2.33
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: object*object
+Output: 
+        30       -72        38       164       -46
+       -30        22       -43       -54       -19
+      -105        -4         1       -78       -50
+lhs prev state
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+
+test: object*=object
+Output: 
+        30       -72        38       164       -46
+       -30        22       -43       -54       -19
+      -105        -4         1       -78       -50
+
+Matrix B:
+         2
+        -6
+         6
+test: object|=object
+Output: 
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+test: object|object
+Output: 
+     -2.09
+     0.853
+      1.18
+lhs prev state
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+test: object|=object
+Output: 
+         6         6         8
+        -1         4        -8
+         0         3        17
+
+current state of lhs and B
+         6         6         8
+        -1         4        -8
+         0         3        17
+         2
+        -6
+        20
+==========================================
+prev state of lhs and B
+         6         6         8
+        -1         4        -8
+        -8         5        -7
+         2
+        -6
+         6
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8
+        -1         4        -8
+rhs: 
+        -8         5        -7        10         2
+        -5         6         3        -5        -6
+         2         8        -8         0        -6
+         7        10        -2         2        -6
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+4
+test: ^=
+Output: 
+Error: non-square matrix provided
+
+test: ^
+Output: 
+Error: non-square matrix provided
+
+test: ~
+Output: 
+         6        -1
+         6         4
+         8        -8
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+4
+test: *
+Output: 
+///////object*n////////
+        24        24        32
+        -4        16       -32
+lhs prev state
+         6         6         8
+        -1         4        -8
+///////n*object////////
+        24        24        32
+        -4        16       -32
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+4
+test: object*=n
+Output: 
+        24        24        32
+        -4        16       -32
+
+4
+test: /
+Output: 
+       1.5       1.5         2
+     -0.25         1        -2
+lhs prev state
+         6         6         8
+        -1         4        -8
+
+test: object*object
+Output: 
+Error: invalid matrix multiplication
+
+test: object*=object
+Output: 
+Error: invalid matrix multiplication
+
+Matrix B:
+         6
+        -2
+         8
+        -9
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+test: object|object
+Output: 
+Error: non-square matrix provided
+
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+current state of lhs and B
+         6         6         8
+        -1         4        -8
+         6
+        -2
+         8
+        -9
+==========================================
+prev state of lhs and B
+         6         6         8
+        -1         4        -8
+         6
+        -2
+         8
+        -9
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+rhs: 
+         6         3        -5        -6         2
+         8        -8         0        -6         7
+        10        -2         2        -6         6
+        -2         8        -9         2         4
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+6
+test: ^=
+Output: 
+Error: non-square matrix provided
+
+test: ^
+Output: 
+Error: non-square matrix provided
+
+test: ~
+Output: 
+         6         4        -7
+         6        -8        10
+         8        -8         2
+        -1         5        -5
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+
+6
+test: *
+Output: 
+///////object*n////////
+        36        36        48        -6
+        24       -48       -48        30
+       -42        60        12       -30
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+///////n*object////////
+        36        36        48        -6
+        24       -48       -48        30
+       -42        60        12       -30
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+
+6
+test: object*=n
+Output: 
+        36        36        48        -6
+        24       -48       -48        30
+       -42        60        12       -30
+
+6
+test: /
+Output: 
+         1         1      1.33    -0.167
+     0.667     -1.33     -1.33     0.833
+     -1.17      1.67     0.333    -0.833
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+
+test: object*object
+Output: 
+       166       -54        -5      -122        98
+      -130       132       -81        82       -76
+        68      -145        84       -40        48
+lhs prev state
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+
+test: object*=object
+Output: 
+       166       -54        -5      -122        98
+      -130       132       -81        82       -76
+        68      -145        84       -40        48
+
+Matrix B:
+         0
+        -7
+         4
+         0
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+test: object|object
+Output: 
+Error: non-square matrix provided
+
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+current state of lhs and B
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         0
+        -7
+         4
+         0
+==========================================
+prev state of lhs and B
+         6         6         8        -1
+         4        -8        -8         5
+        -7        10         2        -5
+         0
+        -7
+         4
+         0
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+rhs: 
+        -6         2         8
+        -8         0        -6
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+-1
+test: ^=
+Output: 
+Error: negative power is not supported
+
+test: ^
+Output: 
+Error: negative power is not supported
+
+test: ~
+Output: 
+         6        -8         2
+         6        -8        -5
+         8         5         6
+        -1        -7         3
+         4        10        -5
+lhs prev state
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+
+-1
+test: *
+Output: 
+///////object*n////////
+        -6        -6        -8         1        -4
+         8         8        -5         7       -10
+        -2         5        -6        -3         5
+lhs prev state
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+///////n*object////////
+        -6        -6        -8         1        -4
+         8         8        -5         7       -10
+        -2         5        -6        -3         5
+lhs prev state
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+
+-1
+test: object*=n
+Output: 
+        -6        -6        -8         1        -4
+         8         8        -5         7       -10
+        -2         5        -6        -3         5
+
+-1
+test: /
+Output: 
+        -6        -6        -8         1        -4
+         8         8        -5         7       -10
+        -2         5        -6        -3         5
+lhs prev state
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+
+test: object*object
+Output: 
+Error: invalid matrix multiplication
+
+test: object*=object
+Output: 
+Error: invalid matrix multiplication
+
+Matrix B:
+         7
+        10
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+test: object|object
+Output: 
+Error: non-square matrix provided
+
+test: object|=object
+Output: 
+Error: non-square matrix provided
+
+current state of lhs and B
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+         7
+        10
+==========================================
+prev state of lhs and B
+         6         6         8        -1         4
+        -8        -8         5        -7        10
+         2        -5         6         3        -5
+         7
+        10
+==========================================
+======================end===============================
+
+======================begin==============================
+Input: 
+lhs: 
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+rhs: 
+         2         9         1        -1        -2         6        -8       -10
+        -2         2        -6        -4         6        -7         2         5
+        -7         5         8        10         0         5        -4         3
+        -7         2        -2        -8         6        -6        -4        -1
+         7         8         4        -4        -1        -4        -3         7
+         7        -5         3       -10         8        -6         0         5
+        -5        -1        -1        -3       -10         8         8        -2
+         5         9         5       -10        -7        -5         5         4
+        -9         7        10         7         8        -2         9        -5
+         9         0        10        10        -2        -7        -2        -4
+test: +
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+test: +=
+Output: 
+Error: adding matrices of different dimesionality
+
+test: -=
+Output: 
+Error: Subtracting matrices of different dimesionality
+
+2
+test: ^=
+Output: 
+        -2        65       122        50       -88       -96      -168        48       -74      -186
+       148        -2        19        87       182       -95       -76       -17        34      -125
+        25        83       212       -13        46       -41       162       177       196      -191
+      -170        80        37        -7      -179       -17         3        29         4         4
+      -174        32       103       -89        65        -5       234        27      -144        56
+       -40       -14      -315       156       -69       109       -81      -237        51        92
+         1       222        49      -133        -3        32      -171        57        90       174
+       165        58        60       -89       159        76       -64       106       136       -66
+       -99       -73        39       101       -53      -117       201        79       180      -202
+      -128        94       -54        -8       -51       118        83       -63       -85       105
+
+test: ^
+Output: 
+        -2        65       122        50       -88       -96      -168        48       -74      -186
+       148        -2        19        87       182       -95       -76       -17        34      -125
+        25        83       212       -13        46       -41       162       177       196      -191
+      -170        80        37        -7      -179       -17         3        29         4         4
+      -174        32       103       -89        65        -5       234        27      -144        56
+       -40       -14      -315       156       -69       109       -81      -237        51        92
+         1       222        49      -133        -3        32      -171        57        90       174
+       165        58        60       -89       159        76       -64       106       136       -66
+       -99       -73        39       101       -53      -117       201        79       180      -202
+      -128        94       -54        -8       -51       118        83       -63       -85       105
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+
+test: ~
+Output: 
+         6         2        -6         2         2        -9        10         4       -10        -9
+         6        -5         7         4        -3        -9        -5       -10         9         2
+         8         6        10         0        -3        -6        -7        -1         7        -8
+        -1         3        -2        -7        -5        -4         8         2        -7         4
+         4        -5         2         4        -9        -4         4         5        -1        -9
+        -8        -6        -6         0         7        -1        -6        -5        -1        -3
+        -8         2         6        -2        -8         8        -4         1         9        -6
+         5         8        -2        -3         2        -9        -1         4         5        -9
+        -7        -8         8         8         8        -4         8         2        10         2
+        10         0        -9         8        -5         9         5       -10         2         3
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+
+2
+test: *
+Output: 
+///////object*n////////
+        12        12        16        -2         8       -16       -16        10       -14        20
+         4       -10        12         6       -10       -12         4        16       -16         0
+       -12        14        20        -4         4       -12        12        -4        16       -18
+         4         8         0       -14         8         0        -4        -6        16        16
+         4        -6        -6       -10       -18        14       -16         4        16       -10
+       -18       -18       -12        -8        -8        -2        16       -18        -8        18
+        20       -10       -14        16         8       -12        -8        -2        16        10
+         8       -20        -2         4        10       -10         2         8         4       -20
+       -20        18        14       -14        -2        -2        18        10        20         4
+       -18         4       -16         8       -18        -6       -12       -18         4         6
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+///////n*object////////
+        12        12        16        -2         8       -16       -16        10       -14        20
+         4       -10        12         6       -10       -12         4        16       -16         0
+       -12        14        20        -4         4       -12        12        -4        16       -18
+         4         8         0       -14         8         0        -4        -6        16        16
+         4        -6        -6       -10       -18        14       -16         4        16       -10
+       -18       -18       -12        -8        -8        -2        16       -18        -8        18
+        20       -10       -14        16         8       -12        -8        -2        16        10
+         8       -20        -2         4        10       -10         2         8         4       -20
+       -20        18        14       -14        -2        -2        18        10        20         4
+       -18         4       -16         8       -18        -6       -12       -18         4         6
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+
+2
+test: object*=n
+Output: 
+        12        12        16        -2         8       -16       -16        10       -14        20
+         4       -10        12         6       -10       -12         4        16       -16         0
+       -12        14        20        -4         4       -12        12        -4        16       -18
+         4         8         0       -14         8         0        -4        -6        16        16
+         4        -6        -6       -10       -18        14       -16         4        16       -10
+       -18       -18       -12        -8        -8        -2        16       -18        -8        18
+        20       -10       -14        16         8       -12        -8        -2        16        10
+         8       -20        -2         4        10       -10         2         8         4       -20
+       -20        18        14       -14        -2        -2        18        10        20         4
+       -18         4       -16         8       -18        -6       -12       -18         4         6
+
+2
+test: /
+Output: 
+         3         3         4      -0.5         2        -4        -4       2.5      -3.5         5
+         1      -2.5         3       1.5      -2.5        -3         1         4        -4         0
+        -3       3.5         5        -1         1        -3         3        -1         4      -4.5
+         1         2         0      -3.5         2         0        -1      -1.5         4         4
+         1      -1.5      -1.5      -2.5      -4.5       3.5        -4         1         4      -2.5
+      -4.5      -4.5        -3        -2        -2      -0.5         4      -4.5        -2       4.5
+         5      -2.5      -3.5         4         2        -3        -2      -0.5         4       2.5
+         2        -5      -0.5         1       2.5      -2.5       0.5         2         1        -5
+        -5       4.5       3.5      -3.5      -0.5      -0.5       4.5       2.5         5         1
+      -4.5         1        -4         2      -4.5      -1.5        -3      -4.5         1       1.5
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+
+test: object*object
+Output: 
+       141       180        91       147       -81       -73      -198        14
+       -24        48        -6        -8      -199       107       -63       -27
+      -303        84         0       114        28       110       152        87
+        68        75       155       194        63       -63        33       -45
+       -15       -38        39        -4       153       -13        65       -63
+        67      -281       -17       171      -131        79        71       -70
+        -3       174        95        48        47       -46       -81      -212
+       -72       129        -4       -89      -103       141        -5       -41
+      -144        52       135       127       -24       -23       284       105
+       -84      -227      -127       107       172      -106        38       -52
+lhs prev state
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+
+test: object*=object
+Output: 
+       141       180        91       147       -81       -73      -198        14
+       -24        48        -6        -8      -199       107       -63       -27
+      -303        84         0       114        28       110       152        87
+        68        75       155       194        63       -63        33       -45
+       -15       -38        39        -4       153       -13        65       -63
+        67      -281       -17       171      -131        79        71       -70
+        -3       174        95        48        47       -46       -81      -212
+       -72       129        -4       -89      -103       141        -5       -41
+      -144        52       135       127       -24       -23       284       105
+       -84      -227      -127       107       172      -106        38       -52
+
+Matrix B:
+         3
+        -6
+        -3
+        -8
+         8
+         7
+        -5
+         9
+        -4
+         5
+test: object|=object
+Output: 
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+         4         3        30         3        -4       -26         2        19       -15         1
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -3        -3         2        -5         0        -9         0        -4       -11        19
+        -4       -10       -26       -12         1         3        -8       -28        17        28
+         3         4        12        -2         5         2        -3        14        -2       -24
+        -5        -7        -9         0       -13        -3         8         1        -4        35
+         3        12         5        21        -1        -6        -4        10         1       -20
+
+test: object|object
+Output: 
+Error: division by zero
+
+test: object|=object
+Output: 
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+         4         3        30         3        -4       -26         2        19       -15         1
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -3        -3         2        -5         0        -9         0        -4       -11        19
+        -5        -2       -10         4        -1        -2        -6       -15        13        -6
+         3         4        12        -2         5         2        -3        14        -2       -24
+        -9         0       -13        -1        -4         3        -3        -8        15         5
+        27        14        12        17        -4        -5         9        20         7        15
+
+current state of lhs and B
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+         4         3        30         3        -4       -26         2        19       -15         1
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -3        -3         2        -5         0        -9         0        -4       -11        19
+        -5        -2       -10         4        -1        -2        -6       -15        13        -6
+         3         4        12        -2         5         2        -3        14        -2       -24
+        -9         0       -13        -1        -4         3        -3        -8        15         5
+        27        14        12        17        -4        -5         9        20         7        15
+         3
+        -6
+       -12
+        -8
+         8
+        10
+        38
+         7
+        37
+      -171
+==========================================
+prev state of lhs and B
+         6         6         8        -1         4        -8        -8         5        -7        10
+         2        -5         6         3        -5        -6         2         8        -8         0
+        -6         7        10        -2         2        -6         6        -2         8        -9
+         2         4         0        -7         4         0        -2        -3         8         8
+         2        -3        -3        -5        -9         7        -8         2         8        -5
+        -9        -9        -6        -4        -4        -1         8        -9        -4         9
+        10        -5        -7         8         4        -6        -4        -1         8         5
+         4       -10        -1         2         5        -5         1         4         2       -10
+       -10         9         7        -7        -1        -1         9         5        10         2
+        -9         2        -8         4        -9        -3        -6        -9         2         3
+         3
+        -6
+        -3
+        -8
+         8
+         7
+        -5
+         9
+        -4
+         5
+==========================================
+======================end===============================
+
